@@ -1,0 +1,349 @@
+.parallax {
+    background-image: url("./assets/Student_Stride_Banner.jpg");
+    /* height: 60dvh; */
+    background-attachment: fixed;
+    background-position:center;
+    background-repeat: no-repeat;
+    /* background-size:2500px; */
+    /* background-position-y: 50px; */
+}
+.box{
+    /* height: 60dvh; */
+    padding: 2em;
+    /* background-color:#fe8e3c; */
+    font-size: 36px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1vw; 
+    text-decoration: none;
+
+    height: 70%;
+    overflow:hidden;
+
+    background-image: url("./assets/Student_Stride_Banner.jpg");
+    /* height: 60dvh; */
+    background-attachment: fixed;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 100px;
+}
+.logo {
+    height: 70px; /* Adjust the size as needed */
+    width: auto;
+    padding: 1em;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #424242;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    transform: translateY(-50px);
+    position: relative;
+    animation: fadeInDown 1.5s forwards;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+header .profile {
+    position: absolute;
+    top: 50%;
+    right: 3em;
+    transform: translate(-50%, -50%);
+}
+header .profile img {
+    width: 3em;
+    aspect-ratio: 1;
+}
+
+header .profile .popup {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    right: -100%;
+    background: black;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity linear 200ms;
+}
+header .profile .popup.show {
+    opacity: 1;
+    z-index: 1;
+}
+header .profile .popup button {
+    width: 100%;
+    background: white;
+    color: black;
+    border: none;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ff6347;
+}
+
+main {
+    padding: 2em;
+}
+
+.shiny-button, .shiny-buttonE, .shiny-buttonS {
+    background: linear-gradient(45deg, #e1f107, #FF4500);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 2rem;
+    padding: 20px 24px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin: 10px;
+    text-decoration: none;
+    display: inline-block;
+    width: 30%;
+    aspect-ratio: 1;
+}
+
+
+.shiny-button::before, .shiny-buttonE::before, .shiny-buttonS::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(-30deg);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+.shiny-button:hover::before,
+.shiny-buttonE:hover::before,
+.shiny-buttonS:hover::before {
+    opacity: 0.5;
+}
+.shiny-button:hover,
+.shiny-buttonE:hover,
+.shiny-buttonS:hover {
+    background: linear-gradient(45deg, #ffd86e, #fd5959);
+    transform: scale(1.05);
+}
+
+.shiny-button:active,
+.shiny-buttonE:active,
+.shiny-buttonS:active {
+    background: linear-gradient(45deg, #FF4500, #FFA500);
+    transform: scale(0.95);
+}
+.button-icon {
+    width: 500px; 
+    height: 500px; 
+    margin-right: 0cqmin; 
+}
+footer {
+    background: linear-gradient(45deg, #FF4500, #FFA500);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    height: 10%;
+}
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+footer p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    animation: fadeIn 3s ease-in-out infinite;
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .box {
+        flex-direction: column;
+        height: auto;
+    }
+    .shiny-button,
+    .shiny-buttonE,
+    .shiny-buttonS {
+        font-size: 1.5rem;
+        padding: 15px 20px;
+        /* margin: 10px 0; */
+    }
+    .button-icon {
+        width: 100px; 
+        height: 100px; 
+    }
+    .parallax {
+        min-height: 400px;
+        background-size: 800px;
+    }
+}
+
+/* For medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    .box {
+        flex-direction: column;
+        height: auto;
+    }
+    .shiny-button,
+    .shiny-buttonE,
+    .shiny-buttonS {
+        font-size: 1.7rem;
+        padding: 18px 22px;
+        /* margin: 20px 0; */
+    }
+    .button-icon {
+        width: 200px; 
+        height: 200px; 
+    }
+    .parallax {
+        min-height: 600px;
+        background-size: 1200px;
+    }
+}
+
+/* For large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    header h1 {
+        font-size: 3em;
+    }
+    .box {
+        flex-direction: row;
+    }
+    .shiny-button,
+    .shiny-buttonE,
+    .shiny-buttonS {
+        font-size: 1.5rem;
+        padding: 20px 24px;
+        /* margin: 0 20px; */
+    }
+    .button-icon {
+        width: 250px; 
+        height: 250px; 
+    }
+    .parallax {
+        min-height: 800px;
+        background-size: 1500px;
+        background-position-y: 150px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1850px) {
+    header h1 {
+        font-size: 3.5em;
+    }
+    .box {
+        flex-direction: row;
+    }
+    .shiny-button,
+    .shiny-buttonE,
+    .shiny-buttonS {
+        font-size: 1.9rem;
+        padding: 20px 24px;
+        /* margin: 0 30px; */
+    }
+    .button-icon {
+        width: 250px; 
+        height: 250px; 
+    }
+    .parallax {
+        min-height: 1200px;
+        background-size: 2000px;
+        background-position-y: 150px;
+    }
+}
+@media (min-width: 1850px) {
+    header h1 {
+        font-size: 3.5em;
+    }
+    .box {
+        flex-direction: row;
+    }
+    .shiny-button,
+    .shiny-buttonE,
+    .shiny-buttonS {
+        font-size: 1.9rem;
+        padding: 20px 24px;
+        /* margin: 0 30px; */
+    }
+    .button-icon {
+        width: 500px; 
+        height: 500px; 
+    }
+    .parallax {
+        min-height: 1200px;
+        background-size: 2500px;
+        background-position-y: 150px;
+    }
+}
