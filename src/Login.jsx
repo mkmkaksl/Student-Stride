@@ -61,9 +61,9 @@ export default function Login(props) {
                     
                     <nav>
                         <ul>
-                            <li><a href="HomePage.html">Home</a></li>
-                            <li><a href="About.html">About</a></li>
-                            <li><a href="Contact.html">Contact</a></li>
+                            <li><a onClick={() => props.setPage("home")}>Home</a></li>
+                            <li><a onClick={() => props.setPage("about")}>About</a></li>
+                            <li><a onClick={() => props.setPage("contact")}>Contact</a></li>
                         </ul>
                     </nav>
                 </header>

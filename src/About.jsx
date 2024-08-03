@@ -1,7 +1,23 @@
 import logo from "./assets/logo.png"
+import account from "./assets/Account.png"
 import "./About.css"
 
 export default function About(props) {
+
+    const handleMouseEnter = (action) => {
+        const popUp = document.querySelector("header .profile .popup")
+        if (action == "show") {
+            popUp.classList.add("show")
+        } else {
+            popUp.classList.remove("show")
+        }
+    }
+
+    const logOut = () => {
+        localStorage.removeItem("user")
+        props.logout();
+    }
+
     return (
         <>
         <header>
@@ -12,11 +28,25 @@ export default function About(props) {
                     </div>
                     <nav>
                         <ul>
-                        <li><a onClick={() => props.setPage("home")}>Home</a></li>
-                        <li><a onClick={() => props.setPage("about")}>About</a></li>
-                        <li><a onClick={() => props.setPage("contact")}>Contact</a></li>
+                            <li><a onClick={() => props.setPage("home")}>Home</a></li>
+                            <li><a onClick={() => props.setPage("about")}>About</a></li>
+                            <li><a onClick={() => props.setPage("contact")}>Contact</a></li>
                         </ul>
                     </nav>
+                    {props.user ? 
+                        <div 
+                        className="profile"
+                        onMouseEnter={() => handleMouseEnter("show")} 
+                        onMouseLeave={() => handleMouseEnter("leave")}
+                        >
+                            <img src={ account } 
+                            alt="Account Icon" className="account-icon" />
+                            <div className="popup">
+                                <button onClick={logOut}>Log out</button>
+                            </div>
+                        </div>
+                        : ""
+                    }
                 </div>
             </header>
             <main>

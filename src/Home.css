@@ -193,6 +193,9 @@ footer {
     position: relative;
     overflow: hidden;
     height: 10%;
+
+    display: grid;
+    place-items: center;
 }
 .footer-content {
     position: relative;

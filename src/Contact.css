@@ -27,6 +27,16 @@
     animation: fadeInSide 1s forwards;
 }
 
+.parallax-bg.yug {
+    background-image: url("./assets/YB.jpg");
+}
+.parallax-bg.manoj {
+    background-image: url("./assets/MB.jpg");
+}
+.parallax-bg.parjanya {
+    background-image: url("./assets/PB.jpg");
+}
+
 .member-info {
     position: fixed;
     padding: 0.5em;
@@ -43,7 +53,7 @@
     color: #fadada;
     text-align: left;
 }
-h2{
+h2.normal {
     color: #fadada;
 }
 

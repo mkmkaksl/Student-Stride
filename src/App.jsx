@@ -33,6 +33,7 @@ function App() {
     logout={() => setUser(undefined)}
     user={user} />
   } else if (page == "contact") {
+    console.log("contact opened")
     return <Contact 
     setPage={(page) => setPage(page)} 
     logout={() => setUser(undefined)}
@@ -59,7 +60,7 @@ function App() {
           }} 
         />
       }
-      return <Chats user={user}/>
+      return <Chats user={user} setPage={(page) => setPage(page)} />
     // return <Chatpage user={user} setPage={(page) => setPage(page)} />
   }
 
