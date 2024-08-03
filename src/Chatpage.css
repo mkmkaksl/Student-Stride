@@ -1,5 +1,7 @@
-
 .chat-page {
     height: 100%;
-    /* border: 3px solid red; */
+}
+
+#root > div > div > div:nth-child(4) > div > form {
+    max-width: 100%;
 }

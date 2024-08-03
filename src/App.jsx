@@ -58,9 +58,10 @@ function App() {
             localStorage.setItem("user", JSON.stringify(user))
             setUser(user)
           }} 
+          setPage={(page) => setPage(page)}
         />
       }
-      return <Chats user={user} setPage={(page) => setPage(page)} />
+      return <Chats user={user} setPage={(page) => setPage(page)} logout={() => setUser(undefined)} />
     // return <Chatpage user={user} setPage={(page) => setPage(page)} />
   }
 

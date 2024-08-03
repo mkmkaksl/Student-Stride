@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body:has(.about, .contact) {
     background-color: rgb(158, 137, 111);
 }
 h2.fade-in {

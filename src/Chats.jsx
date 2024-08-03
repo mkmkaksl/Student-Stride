@@ -1,6 +1,7 @@
 import { PrettyChatWindow } from "react-chat-engine-pretty";
 import logo from "./assets/logo.png"
 import account from "./assets/Account.png"
+import "./Chatpage.css"
 
 export default function Chatpage(props) {
 
