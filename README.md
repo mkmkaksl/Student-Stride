@@ -1,8 +1,7 @@
-# React + Vite
+# Student Stride
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+Student Stride is an application which is meant to allow FGLI (First Gen, Low Income) Students an opportunity to connect with mentors with more experience. This would allow them to learn about challenging experiences like high school and college from these mentors and be better prepared for these challenges, thus giving them better career opportunities.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup Instructions
+In order to 

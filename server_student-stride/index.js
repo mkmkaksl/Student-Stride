@@ -7,13 +7,7 @@ const { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } = 
 const { initializeApp } = require("firebase/app");
 
 const config = {
-    apiKey: "AIzaSyAUo-5XXRf812bGtE4l6pHtSGwZGktwTK8",
-    authDomain: "student-stride.firebaseapp.com",
-    projectId: "student-stride",
-    storageBucket: "student-stride.appspot.com",
-    messagingSenderId: "659729561887",
-    appId: "1:659729561887:web:3b7fa7bf9f5843ad16982a",
-    measurementId: "G-ZC1M3R4KKY"
+    ...Firebase Config Details
 }
 
 const firebaseApp = initializeApp(config);
@@ -28,7 +22,7 @@ const PORT = process.env.PORT || 3001;
 const app = express()
 app.use(cors());
 
-const chatEnginePrivateKey = "026d9869-946d-46d5-9bef-e916791e87d7";
+const chatEnginePrivateKey = {Private Key};
 const chatEngineProjectID = "e8dd7476-2b0a-45e0-801e-826d2b7a77a2";
 
 const chatEngineHeaders = {
@@ -37,13 +31,9 @@ const chatEngineHeaders = {
 
 app.post("/login", jsonParser, async (req, res) => {
     const { userName, email, password } = await req.body;
-    console.log("Body username is " + userName)
-    console.log("Body email is " + email)
-    console.log("Body password is " + password)
 
     signInWithEmailAndPassword(auth, email, password)
     .then(async (userCreds) => {
-        console.log("User logged in successfully");
         const user = userCreds.user;
 
         try {
@@ -53,11 +43,8 @@ app.post("/login", jsonParser, async (req, res) => {
                     "Private-Key": chatEnginePrivateKey
                 } }
             )
-            console.log("R is: " + r.data)
             return res.send(r.data);
         } catch (e) {
-            console.log("ERROR")
-            console.log(e)
             return res.send(e);
         }
 
@@ -71,13 +58,9 @@ app.post("/login", jsonParser, async (req, res) => {
 
 app.post("/signup", jsonParser, async (req, res) => {
     const { userName, email, password } = await req.body;
-    console.log("Body username is " + userName)
-    console.log("Body email is " + email)
-    console.log("Body password is " + password)
 
     createUserWithEmailAndPassword(auth, email, password)
     .then(async (userCreds) => {
-        console.log("User logged in successfully");
         const user = userCreds.user;
 
         try {
@@ -87,11 +70,8 @@ app.post("/signup", jsonParser, async (req, res) => {
                     "Private-Key": chatEnginePrivateKey
                 } }
             )
-            console.log("R is: " + r.data)
             return res.send(r.data);
         } catch (e) {
-            console.log("ERROR")
-            console.log(e)
             return res.send(e);
         }
 
